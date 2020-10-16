@@ -4,7 +4,7 @@ body{
     line-height: 1.5;
     padding: 0;
     margin: 0;
-    background-color: blue;
+    background-color:#ffffff;
 }
 /*Global*/
 *{
@@ -30,9 +30,10 @@ ul{
     height: 38px;
     background: orange;
     border: 0;
-    padding-left: 20px;
-    padding-right: 20px;
-    color:white
+    padding-left: 10px;
+    padding-right: 10px;
+    color:white;
+    width: fit-content;
 }
 /*Header*/
 header{
@@ -57,6 +58,7 @@ header{
     font-weight: 100;
     margin-top: 10px;
     margin-bottom: 10px;
+    margin-left: 20px;
 }
 
 header a{
@@ -70,7 +72,6 @@ header ul{
 }
 header li{
     padding:10px;
-    border: white 1px solid;
 }
 header li:hover{
     opacity: 80%;
@@ -96,19 +97,33 @@ header .fas, header .fab{
     padding: 3px;
 
 }
+.fa-bars{
+    display: none;
+}
+.fa-facebook-f{
+    color: #325a97;
+}
+.fa-twitter{
+    color:#00aced;
+}
+.fa-youtube{
+    color: #ff0000
+}
+
 /*Showcase*/
 #showcase{
-    min-height: 400px;
-    background-color: aquamarine;
+    min-height: auto;
+    background-color: #ffffff;
     text-align: center;
-    color: lightskyblue;
+    color: #ffffff;
+    margin-bottom: 10px;
 }
 #showcase .n-center{
     order: 2;
     flex-basis: 60%;
 }
 #showcase img{
-    width: 100%;
+    width: 60%;
 }
 #showcase h1{
     margin-top: 100px;
@@ -118,29 +133,90 @@ header .fas, header .fab{
 #showcase p{
     font-size: 20px;
 }
+#showcase .subscribe{
+   background-color: white;
+   flex-basis: 20%; 
+   order: 1;
+   color: #000000;
+}
+
+#showcase .n-center h1{
+    margin-top: 10px;
+    margin-bottom: 6px;
+}
+#showcase .n-center{
+    display: flex;
+    margin-top: 10px;
+    background-color: #222128;
+}
+#showcase .n-center img{
+    padding: 10px;
+}
+
+#showcase .title h5{
+    text-align: left;
+    margin-top: 10px;
+    margin-bottom: 0px;
+    padding: 0px;
+    margin-left: 3px;
+}
+#showcase .title h1{
+    text-align: center;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding: 0px;
+    margin-left: 3px;
+    line-height: 1;
+}
+
+.rigth-c{
+    order: 3;
+    color: #000000;
+    flex-basis: 20%;
+}
+.news-bar{
+    display: flex;
+    flex-direction: column;
+}
+.rigth-c p{
+    text-transform: uppercase;
+    padding-bottom: 3px;
+    font-size: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 200;
+    border-bottom: #000000 1px solid;
+    margin-left: 10px;
+    text-align: left;
+    margin-right: 10px;
+}
+.news-bar a{
+    text-decoration: none;
+}
+.news-bar a:hover{
+    text-decoration: underline;
+    color: #464D4D;
+}
 /*Newsletter*/
 #newsletter{
     padding: 15px;
-    background: blue;
+    background: #F47641;
     color: white;
 }
 #newsletter h1{
-    float: left;
+    display: block;
+    margin: 0px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 25px;
 }
-#newsletter form{
-    margin-top: 15px;
-}
-#newsletter input[type="email"]{
-    padding: 4px;
-    height: 25px;
-    width: 250px;
-}
+
+
 /*boxes*/
 #boxes{
     margin-top: 20px;
+    background-color: #ffffff;
 }
 #boxes .box{
-    /*width: 30%;*/
+    width: 30%;
     padding: 10px;
     text-align: center;
 }
@@ -149,14 +225,48 @@ header .fas, header .fab{
 }
 #boxes .conteiner-1{
     display: flex;
+    justify-content: center;
 }
-
+/*Footer*/
+footer form{
+    margin: 10px 10px 15px 10px;
+    display: flex;
+    align-self: center;
+    width: fit-content;
+    padding: 3px;
+    flex-direction: column;
+    flex-basis: 25%;
+    align-items: center;
+    border: #1D2525 1px solid;
+}
+footer form p{
+    margin: 0;
+    color: #ffffff;
+    text-transform: uppercase;
+    align-self: center;
+}
+footer input[type="email"]{
+    padding: 4px;
+    height: 25px;
+    width: 250px;
+    margin: 3px
+}
+footer .button_1:hover{
+    opacity: 80%;
+    color: blue;
+}
 footer{
+    display: flex;
+    flex-direction: column;
     padding: 20px;
     margin-top: 20px;
     color: white;
-    background-color: orange;
+    background: url('../img/header-background.jpg') no-repeat -200px -300px;
     text-align: center;
+    border-top: grey 3px solid;
+}
+footer p{
+    align-self: center;
 }
 
 /*Media Queries*/
@@ -168,6 +278,12 @@ footer{
     }
     #boxes  .box{
        width: 100%;
+    }
+    .nav-bar{
+        display: none;
+    }
+    .fa-bars{
+        display: inline;
     }
 
     header{
