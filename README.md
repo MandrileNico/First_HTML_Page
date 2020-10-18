@@ -7,5 +7,5 @@ Mandrile Nicolás
 
 ---
 ## Coments
-In the left colum, i put images because i don't know use java script yet. That was a compromise.
+In the left colum, i put images because i don't know use java script yet. That was a compromise solution.
 
