@@ -7,8 +7,8 @@ https://mandrilenico.github.io/RRcourse/
 
 ---
 ## Coments
-Index: In the left colum, i put images because i don't know use java script yet. That was a compromise solution.
-
+Index: In the left colum, i put images because i want to use dinamyc charts. That was a compromise solution.
+Js: In the verificacion of subcription, the mail verification is poor because i don't use regular expresion to check the values. I will added soon. 
 ---
 ## Author
 Mandrile Nicolás
