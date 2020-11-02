@@ -2,7 +2,6 @@ var checkhList = [];
 var listValues = [];
 //Validation Name:
 var itemInput = document.getElementById('fullNameForm');
-
 itemInput.addEventListener('focus', runEvent);
 itemInput.addEventListener('blur', runEvent);
 
@@ -382,3 +381,10 @@ function runSubmit(e){
         }
     }
 }
+//bonus
+var helloName = document.getElementById('fullNameForm');
+helloName.addEventListener('input', enterName);
+function enterName() {
+    var x = document.getElementById("fullNameForm").value;
+    document.getElementById("helloform").innerHTML = "Hello! " + x;
+  }
