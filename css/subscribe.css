@@ -30,6 +30,7 @@
     align-self: flex-start;
     font-size: 20px;
     font-weight: 300;
+    width: fit-content;
 }
 .cages input{
     width: 100%;
@@ -52,19 +53,19 @@ footer form{
         display: flex;
         flex-direction:row;
         flex-flow: wrap;
-        padding-left: 60px;
+        padding-left: 10%;
+        padding-right: 10% ;
     }
     .form1{
         display: flex;
         flex-direction: column;
-        align-items: center;
         padding: 5px;
         margin: 10px;
     }
     .cages{
-        width: 45%;
+        flex-basis: 35%;
     }
     .cages input{
-        width: 80%;
+        width: 100%;
     }
 } 
