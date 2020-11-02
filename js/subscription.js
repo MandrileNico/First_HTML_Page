@@ -370,7 +370,7 @@ function runSubmit(e){
         }
     }
     if(p < checkhList.length){
-        alert('Check the erros to subscribe:\n' + errorList.join('\n-'));
+        alert('Check the erros to subscribe:\n' + errorList.join('\n'));
     } else{
         if((checkhList.length === p) && (checkhList.length != 0)) {
             confirm('Check your personal data: \n -Name:' + listValues[0] + '\n -Age:' + listValues[1] + '\n -DNI:'+ listValues[2] 
