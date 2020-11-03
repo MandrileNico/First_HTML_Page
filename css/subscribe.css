@@ -44,6 +44,11 @@
     color:#ffffff;
     width: fit-content;
 }
+.errorsForm{
+    color: #ff0000;
+    font-size: 12px;
+}
+
 footer form{
     visibility: hidden;
 }
