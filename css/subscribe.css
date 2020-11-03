@@ -46,7 +46,10 @@
 }
 .errorsForm{
     color: #ff0000;
-    font-size: 12px;
+    font-size: 13px;
+}
+.correctStyle{
+    color: #19b419;
 }
 
 footer form{

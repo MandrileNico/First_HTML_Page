@@ -60,8 +60,12 @@ itemInput.addEventListener('blur', runEvent);
 function runEvent(e){
     if(e.type === 'focus'){
         var quit = document.querySelector('#wrong1');
+        var quit1 = document.querySelector('#correct1');
         if (quit != null){
             quit.remove();
+        }
+        if (quit1 != null){
+            quit1.remove();
         }
     }
     if(e.type === 'blur'){
@@ -70,6 +74,10 @@ function runEvent(e){
         if((fullname.length === p) && (onlyLetters(fullname) >= 6) && (onlySpace(fullname) >=1)){
             checkhList[0] = true;
             listValues[0] = fullname;
+            var boxinput = document.getElementById('fullNameForm');
+            boxinput.insertAdjacentHTML('afterend', '<span id="correct1"><i class="far fa-check-circle"></i></span>');
+            var nameform = document.querySelector('#correct1');
+            nameform.classList.add('correctStyle');
         } else {
             checkhList[0] = false;
             var boxinput = document.getElementById('fullNameForm');
@@ -87,8 +95,12 @@ ageInput.addEventListener('blur', checkAge);
 function checkAge(e){
     if(e.type === 'focus'){
         var quit = document.querySelector('#wrong2');
+        var quit1 = document.querySelector('#correct2');
         if (quit != null){
             quit.remove();
+        }
+        if (quit1 != null){
+            quit1.remove();
         }
     }
     if(e.type === 'blur'){
@@ -97,6 +109,10 @@ function checkAge(e){
             console.log('Age ok');
             checkhList[1] = true;
             listValues[1] = inputAge;
+            var boxinput = document.getElementById('ageForm');
+            boxinput.insertAdjacentHTML('afterend', '<span id="correct2"><i class="far fa-check-circle"></i></span>');
+            var nameform = document.querySelector('#correct2');
+            nameform.classList.add('correctStyle');
         } else {
             checkhList[1] = false;
             if(inputAge < 18){
@@ -123,8 +139,14 @@ dniInput.addEventListener('blur', dnival);
 function dnival(e){
     if(e.type === 'focus'){
         var quit = document.querySelector('#wrong3');
+        var quit1 = document.querySelector('#correct3');
         if (quit != null){
             quit.remove();
+            
+        }
+        if (quit1 != null){
+            quit1.remove();
+            
         }
     }
     if(e.type === 'blur'){
@@ -132,6 +154,10 @@ function dnival(e){
         if(((inputdni.length === 7) || (inputdni.length === 8)) && (inputdni.length === onlyNumber(inputdni))){
             checkhList[2] = true;
             listValues[2] = inputdni;
+            var boxinput = document.getElementById('dniForm');
+            boxinput.insertAdjacentHTML('afterend', '<span id="correct3"><i class="far fa-check-circle"></i></span>');
+            var nameform = document.querySelector('#correct3');
+            nameform.classList.add('correctStyle');
         } else {
             checkhList[2] = false;
             var boxinput = document.getElementById('dniForm');
@@ -150,8 +176,12 @@ phoneInput.addEventListener('blur', phoneVal);
 function phoneVal(e){
     if(e.type === 'focus'){
         var quit = document.querySelector('#wrong4');
+        var quit1 = document.querySelector('#correct4');
         if (quit != null){
             quit.remove();
+        }
+        if (quit1 != null){
+            quit1.remove();   
         }
     }
     if(e.type === 'blur'){
@@ -159,6 +189,10 @@ function phoneVal(e){
         if((inputPhone.length >= 7) && (inputPhone.length === onlyNumber(inputPhone))) {
             checkhList[3] = true;
             listValues[3] = inputPhone;
+            var boxinput = document.getElementById('phoneForm');
+            boxinput.insertAdjacentHTML('afterend', '<span id="correct4"><i class="far fa-check-circle"></i></span>');
+            var nameform = document.querySelector('#correct4');
+            nameform.classList.add('correctStyle');
         } else {
             checkhList[3] = false;
             var boxinput = document.getElementById('phoneForm');
@@ -177,8 +211,12 @@ addrInput.addEventListener('blur', addval);
 function addval(e){
     if(e.type === 'focus'){
         var quit = document.querySelector('#wrong5');
+        var quit1 = document.querySelector('#correct5');
         if (quit != null){
             quit.remove();
+        }
+        if (quit1 != null){
+            quit1.remove();
         }
     }
     if(e.type === 'blur'){
@@ -187,6 +225,10 @@ function addval(e){
         if((p === inputAddr.length) && (inputAddr.length >= 5)){
             checkhList[4] = true;
             listValues[4] = inputAddr;
+            var boxinput = document.getElementById('addressForm');
+            boxinput.insertAdjacentHTML('afterend', '<span id="correct5"><i class="far fa-check-circle"></i></span>');
+            var nameform = document.querySelector('#correct5');
+            nameform.classList.add('correctStyle');
         }else{
             checkhList[4] = false;
             var boxinput = document.getElementById('addressForm');
@@ -205,8 +247,12 @@ cityInput.addEventListener('blur', cityval);
 function cityval(e){
     if(e.type === 'focus'){
         var quit = document.querySelector('#wrong6');
+        var quit1 = document.querySelector('#correct6');
         if (quit != null){
             quit.remove();
+        }
+        if (quit1 != null){
+            quit1.remove();
         }
     }
     if(e.type === 'blur'){
@@ -216,6 +262,10 @@ function cityval(e){
             if(p === inputCity.length){
                 checkhList[5] = true;
                 listValues[5] = inputCity;
+                var boxinput = document.getElementById('cityForm');
+                boxinput.insertAdjacentHTML('afterend', '<span id="correct6"><i class="far fa-check-circle"></i></span>');
+                var nameform = document.querySelector('#correct6');
+                nameform.classList.add('correctStyle');
             }else{
                 checkhList[5] = false;
                 var boxinput = document.getElementById('cityForm');
@@ -241,8 +291,12 @@ postInput.addEventListener('blur', postVal);
 function postVal(e){
     if(e.type === 'focus'){
         var quit = document.querySelector('#wrong7');
+        var quit1 = document.querySelector('#correct7');
         if (quit != null){
             quit.remove();
+        }
+        if (quit1 != null){
+            quit1.remove();
         }
     }
     if(e.type === 'blur'){
@@ -250,6 +304,10 @@ function postVal(e){
         if((inputPost.length >= 3) && (inputPost.length === onlyNumber(inputPost))) {
             checkhList[6] = true;
             listValues[6] = inputPost;
+            var boxinput = document.getElementById('postForm');
+            boxinput.insertAdjacentHTML('afterend', '<span id="correct7"><i class="far fa-check-circle"></i></span>');
+            var nameform = document.querySelector('#correct7');
+            nameform.classList.add('correctStyle');
         } else {
             checkhList[6] = false;
             var boxinput = document.getElementById('postForm');
@@ -269,8 +327,12 @@ emailInput.addEventListener('blur', emailVal);
 function emailVal(e){
     if(e.type === 'focus'){
         var quit = document.querySelector('#wrong8');
+        var quit1 = document.querySelector('#correct8');
         if (quit != null){
             quit.remove();
+        }
+        if (quit1 != null){
+            quit1.remove();
         }
     }
     if(e.type === 'blur'){
@@ -278,6 +340,10 @@ function emailVal(e){
         if((inputMail.indexOf('@') != -1) && (inputMail.indexOf('.com') != -1)){
             checkhList[7] = true;
             listValues[7] = inputMail;
+            var boxinput = document.getElementById('emailForm');
+            boxinput.insertAdjacentHTML('afterend', '<span id="correct8"><i class="far fa-check-circle"></i></span>');
+            var nameform = document.querySelector('#correct8');
+            nameform.classList.add('correctStyle');
         } else {
             checkhList[7] = false;
             var boxinput = document.getElementById('emailForm');
@@ -299,8 +365,12 @@ password2Input.addEventListener('blur', passwordValidation2);
 function passwordValidation1(e){
     if(e.type === 'focus'){
         var quit = document.querySelector('#wrong9');
+        var quit1 = document.querySelector('#correct9');
         if (quit != null){
             quit.remove();
+        }
+        if (quit1 != null){
+            quit1.remove();
         }
     }
     if(e.type === 'blur'){
@@ -309,22 +379,30 @@ function passwordValidation1(e){
         if((inputPassword1.length >= 8) && (inputPassword1.length === p)){
             checkhList[8] = true;
             listValues[8] = inputPassword1;
+            var boxinput = document.getElementById('passForm1');
+            boxinput.insertAdjacentHTML('afterend', '<span id="correct9"><i class="far fa-check-circle"></i></span>');
+            var nameform = document.querySelector('#correct9');
+            nameform.classList.add('correctStyle');
         } else {
             checkhList[8] = false;
             var boxinput = document.getElementById('passForm1');
             boxinput.insertAdjacentHTML('afterend', '<span id="wrong9"><i class="far fa-times-circle"></i>Insert a correct password</span>');
-            var pass = document.querySelector('#wrong9');
+            var passworderror = document.querySelector('#wrong9');
             listValues[8] = document.querySelector('#wrong9').textContent;
-            postForm.classList.add('errorsForm');
+            passworderror.classList.add('errorsForm');
         }
     }
 }
 function passwordValidation2(e){
     if(e.type === 'focus'){
         var quit = document.querySelector('#wrong10');
+        var quit1 = document.querySelector('#correct10');
         if (quit != null){
            quit.remove();
         }
+        if (quit1 != null){
+            quit1.remove();
+         }
     }
     if(e.type === 'blur'){
         var inputPassword1 = document.getElementById('passForm1').value;
@@ -332,6 +410,10 @@ function passwordValidation2(e){
         if(inputPassword1 === inputPassword2){
             checkhList[9] = true;
             listValues[9] = inputPassword2;
+            var boxinput = document.getElementById('passForm2');
+            boxinput.insertAdjacentHTML('afterend', '<span id="correct10"><i class="far fa-check-circle"></i></span>');
+            var nameform = document.querySelector('#correct10');
+            nameform.classList.add('correctStyle');
         } else {
             checkhList[9] = false;
             var boxinput = document.getElementById('passForm2');
@@ -363,9 +445,9 @@ function runSubmit(e){
         alert('Check the erros to subscribe:\n' + errorList.join('\n'));
     } else{
         if((checkhList.length === p) && (checkhList.length != 0)) {
-            confirm('Check your personal data: \n -Name:' + listValues[0] + '\n -Age:' + listValues[1] + '\n -DNI:'+ listValues[2] 
-            + '\n -Phone number:'+ listValues[3]+ '\n -Adrress:'+ listValues[4]+ '\n -City:'+ listValues[5]+ '\n -Post number:'+ listValues[6] 
-            + '\n -Email:'+ listValues[7] + '\n -Password:'+ listValues[8])
+            confirm('Check your personal data: \n -Name: ' + listValues[0] + '\n -Age: ' + listValues[1] + '\n -DNI: '+ listValues[2] 
+            + '\n -Phone number: '+ listValues[3] + '\n -Adrress: '+ listValues[4]+ '\n -City: '+ listValues[5]+ '\n -Post number: '+ listValues[6] 
+            + '\n -Email: ' + listValues[7] + '\n -Password: ' + listValues[8])
         } else {
             alert('Complete the form if you want to subscribe')
         }
