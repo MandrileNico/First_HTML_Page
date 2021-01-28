@@ -3,7 +3,7 @@ Here you will find my first page, made with html and css
 
 ---
 ## Link
-https://mandrilenico.github.io/RRcourse/
+https://mandrilenico.github.io/First_HTML_Page/
 
 ---
 ## Coments
